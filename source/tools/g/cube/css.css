@@ -1,4 +1,4 @@
-body {font-family:Microsoft Yahei,Verdana,sans-serif,宋体;font-size: 14px;background-color: #F0EFE2;margin:0px;padding:0;line-height: 1.5;color: black;text-decoration: none;background-image: url(http://www.atool.org/res/img_idev.png);}
+body {font-family:Microsoft Yahei,Verdana,sans-serif,宋体;font-size: 14px;background-color: #F0EFE2;margin:0px;padding:0;line-height: 1.5;color: black;text-decoration: none;background-image: url(img/img_idev.png);}
 #warp{ width:1000px; margin:0px auto;background:#F0EFE2;background-image: url(body_bg.jpg);background-repeat: repeat; padding-top:50px;}
 .menu{position: fixed; width:1000px;height:40px;background-color: midnightblue;z-index: 9999;top:0;}
 .center{width:100%;}
