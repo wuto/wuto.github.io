@@ -19,6 +19,8 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 $ hexo server
 ```
 
+<!--more-->
+
 More info: [Server](https://hexo.io/docs/server.html)
 
 ### Generate static files

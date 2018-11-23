@@ -5,15 +5,15 @@
 # Site
 title: Hexo
 subtitle:
-description:
+description: 记录
 keywords:
-author: John Doe
-language:
+author: Wuto
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://wuto.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
