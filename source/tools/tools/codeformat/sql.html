@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN"> 
+<head> 
+<title>在线代码格式化</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="Content-Language" content="zh-CN" /> 
+<link rel="stylesheet" href="http://tool.oschina.net/css/basic.css?20120912" type="text/css"/> 
+<script type="text/javascript" src='http://tool.oschina.net/js/jquery/jquery-1.7.2.js'></script>
+<script type="text/javascript" src='http://tool.oschina.net/js/jquery/jquery.cookies.2.2.0.min.js'></script>
+<link rel="stylesheet" href='http://tool.oschina.net/js/bootstrap/css/bootstrap.min.css'/>
+<script src='http://tool.oschina.net/js/bootstrap/js/bootstrap.min.js'></script>
+
+</head>
+<body>
+	
+	<div class="wrapper">
+		<script type="text/javascript" src="http://tool.oschina.net/js/ad/tag.js?date=20140625"></script>
+		
+	
+	</div>
+	<style>
+	.leftBar .title,.rightBar .title,.topBar .title{margin-bottom:10px;}
+	.bottomBar .title{margin:10px 0;}
+</style>
+<link id="css" rel="stylesheet" type="text/css" href="http://tool.oschina.net/js/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+<link id="css" rel="stylesheet" type="text/css" href="http://tool.oschina.net/js/jquery/textarearesizer/style.css"/>
+<script type="text/javascript" src="http://tool.oschina.net/js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="http://tool.oschina.net/js/jquery/jquery.form-2.82.js"></script>
+<script type="text/javascript" src="http://tool.oschina.net/js/jquery/textarearesizer/jquery.textarearesizer.compressed.js"></script>
+<script>
+$(function(){
+	$('textarea.resizable:not(.processed)').TextAreaResizer();
+	$('div.resizable:not(.processed)').TextAreaResizer();
+});
+</script>
+<div id="mainContent" class="tool_content wrapper">
+<div class="toolName">在线代码格式化</div>
+    <div class="toolUsing clearfix">
+    	<div class="toolsTab  clearfix">
+    	    <ul class="nav nav-tabs">
+                 <li ><a href="html.html">HTML格式化</a></li>
+                <li ><a href="xml.html">XML格式化</a></li>
+                <li ><a href="css.html">CSS格式化</a></li>
+				<li ><a href="json.html">JSON格式化</a></li>
+				<li ><a href="js.html">JavaScript格式化</a></li>
+                <li ><a href="java.html">Java格式化</a></li>
+                <li class="active"><a href="sql.html">SQL格式化</a></li>
+    	    </ul>
+    	    <div class="clear"></div>
+    	</div>
+		<form id="codeformat_form" action="http://tool.oschina.net/action/format/sql" method="POST">
+			<script type="text/javascript" src="http://tool.oschina.net/js/syntaxhighlighter_3.0.83/scripts/shBrushSql.js"></script>
+<script type="text/javascript" src="http://tool.oschina.net/js/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="http://tool.oschina.net/js/copy_format.js"></script>
+<script type="text/javascript">
+	$(function(){
+	   	$("#druid").popover({
+    		'title':'JDBC连接池、监控组件 Druid',
+    		'content':'Druid是一个JDBC组件，它包括三部分： <br>DruidDriver:代理Driver，能够提供基于Filter－Chain模式的插件体系。<br> DruidDataSource:高效可管理的数据库连接池。 <br>SQLParser ',
+			'placement':'bottom'
+    	});
+		$("#codeformat_form").ajaxForm({
+			beforeSubmit:function(){
+				$("#wrap").html("");
+				var data = $("#sqldata")
+				if(data.val().length==0){
+					alert("待格式化SQL为空");
+					data.focus();
+					return false;
+				}
+				$("#format").button('loading')
+			},
+			dataType:"json",
+			success:function(json){
+				$("#format").button('reset');
+				if(json.msg){
+					alert(json.msg);
+					return;
+				}
+				$("#wrap").val(json.fsql);
+				SyntaxHighlighter.highlight();
+			}
+		});
+	});
+</script>
+<div class="alert alert-info">
+   SQL格式化采用<em><a href="http://my.oschina.net/wenshao" target="_blank">温少</a></em>的<code id="druid"><a href="http://www.oschina.net/p/druid" target="_blank">Druid</a></code>SQL格式化工具.
+</div>
+<div class="topBar">
+    <div class="title">待格式化SQL：</div>
+	<textarea name="sql" id="sqldata" style="resize:none;" class="resizable"></textarea>
+</div>
+<div class="operateTB form-inline">
+	<label for="sqlType">
+		数据库类型：
+    </label>
+    <select id="sqlType" name="sqlType" class="span2">
+		<option value="mysql">MySQL</option>
+		<option value="sqlserver">SQL Server</option>
+		<option value="oracle">Oracle</option>
+		<option value="postgresql">PostgreSQL</option>
+			</select>
+	<input class="btn btn-small btn-primary" data-loading-text="正在格式化SQL..." id="format" type="submit" value="格式化"/>
+	<input class="btn btn-small btn-success" id="copy_format" data-clipboard-target="wrap" type="button" value="复制格式化代码"/>
+</div>
+<div class="bottomBar">
+    <div class="title">格式化SQL：</div>
+    <textarea id="wrap" style="resize:none;" class="resizable"></textarea>
+</div>        </form>
+    </div>
+</div>
+</body>
+</html>

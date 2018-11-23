@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>  
+		<title>在线base64编码 - 在线base64解码工具</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<link rel="stylesheet" href="bijou.min.css" />
+<link rel="stylesheet" href="style.new.css" />
+
+
+<script type="text/javascript" src="core-min.js"></script>
+<script type="text/javascript" src="enc-base64-min.js"></script>
+<style type="text/css">
+			textarea {
+				height: 100px;
+	}
+</style>
+</head>  
+<body  style="background-image: url(body_bg.jpg);"> 
+		<div class='container'>
+			<h3 class='explainer'>在线base64编码解码、base64加密解密 - aTool在线工具</h3>
+
+	        <ul class="new_tools_list">
+				<li>本工具可以将字符串做base64编码加密，或者将base64加密之后的字符串还原。</li>
+				<li>目前基于UTF-8编码实现的Base64编码和解码（支持utf-8能表示的所有字符的base64编码和解码，如汉字等），可以和java的BASE64编码对应。</li>
+			</ul>
+	        <div class='divider'></div>
+	        <h4>贴入需要base64编码、解码的字符串</h4>
+			<textarea placeholder="贴入需要base64编码、解码的字符串" id="src"></textarea>
+			<div class="row">
+				<button class='button primary small' type="button" onclick="javascript:base64_encode();">Base64编码</button>
+				<button class='button notice small' type="button" onclick="javascript:base64_decode();">Base64解码</button>
+			</div>
+			<textarea placeholder="base64解码、编码之后的字符串" id="dst"></textarea>
+			<script type="text/javascript">
+				function base64_encode() {
+					var source = document.getElementById('src').value;
+					if(source == ''){
+						return false;
+					}
+					document.getElementById('dst').value = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(source));
+				}
+				function base64_decode() {
+					var result = document.getElementById('src').value;
+					var result_lines = result.split("\n");
+					if(result == ''){
+						return false;
+					}
+					var sources = '';
+					var words = '';
+					for (var i = 0; i < result_lines.length; i ++) {
+						words  = CryptoJS.enc.Base64.parse(result_lines[i]);
+						sources += words.toString(CryptoJS.enc.Utf8) + "\n";
+					};
+					document.getElementById('dst').value = sources;
+				}
+			</script>
+			<div class='divider'></div>
+	        <h4 class='explainer'>Base64编码说明 | Introduce</h4>
+	        <ul class="new_tools_list">
+	        	<li>Base64编码要求把3个8位字节（3*8=24）转化为4个6位的字节（4*6=24），之后在6位的前面补两个0，形成8位一个字节的形式。 如果剩下的字符不足3个字节，则用0填充，输出字符使用'='，因此编码后输出的文本末尾可能会出现1或2个'='。</li>
+				<li>为了保证所输出的编码位可读字符，Base64制定了一个编码表，以便进行统一转换。编码表的大小为2^6=64，这也是Base64名称的由来。</li>
+				<li>通过本工具可以对代码进行Base64加密或者解密。Base64是网络上最常见的用于传输8Bit字节代码的编码方式之一。 </li>
+				<li>Base64言下之意是一种基于64个可打印字符来表示二进制数据的表示方法!它是一种将二进制编码转换为可打印字符一种。它是MIME编码里面非常常见一种可逆转换二进制方法！现常用于电子邮件中，邮件类型声明如：Content-Transfer-Encoding: base64 ！ 由于2的6次方等于64，所以每6个位为一个单元，对应某个可打印字符。三个字节有24个位元，可以对应4个Base64单元，因此3个字节需要用4个base64单元来表示！如：MaN对应base64是：TW	Fu ! 这64个可打印字符a-z,A-Z,0-9就占62字符，剩下2个字符不同系统可能使用不同，经常是:“+/”。base64编码后，文档大小为原先的4/3，里面所有字节（包括常见可打印字符）也编码了！</li>
+			</ul>
+	        <div class='divider'></div>
+</body>  
+</html>

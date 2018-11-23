@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	<title>在线魔方游戏 - aTool在线工具</title>
+	<link rel="author" href="https://plus.google.com/117054904202244414422?rel=author" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
+<link rel="stylesheet" href="res/ad-block/ad-block.css" />
+<script>
+	
+
+	function async_load(url){ 
+		var s = document.createElement('script'); 
+		s.type = 'text/javascript'; 
+		s.async = true; 
+		s.src = url; 
+		var x = document.getElementsByTagName('script')[0]; 
+		x.parentNode.insertBefore(s, x); 
+	}
+	function sync_load_js(url) {
+		if (window.attachEvent) 
+			window.attachEvent('onload', function() {async_load(url)}); 
+		else 
+			window.addEventListener('load', function() {async_load(url)}, false); 
+	}
+
+	function async_do_func(func) {
+		if (window.attachEvent) 
+			window.attachEvent('onload', func); 
+		else 
+			window.addEventListener('load', func, false); 
+	}
+	sync_load_js("wb.js");
+</script>
+	<link href="css.css" rel="stylesheet" type="text/css"/>
+	<meta name="Keywords" content="aTool,在线工具,关于,在线游戏,在线魔方,魔方" />  
+	<meta name="Description" content="aTool,在线工具,一个在线的魔方游戏" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://cdn.atool.org/res/magic_cube_files/cube.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.atool.org/res/magic_cube_files/doodle.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.atool.org/res/magic_cube_files/certificate.css">
+    <!-- Script font -->
+    <link href="http://cdn.atool.org/res/magic_cube_files/css" rel="stylesheet" type="text/css">
+    <!-- compiled & minified cube code -->
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/tween.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/Three.noStrict.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/cuber.min.js"></script>
+  </head>
+  <body>
+    <div id="bg"></div>
+    <div id="container"></div>
+    <div id="fail">
+      <img src="http://cdn.atool.org/res/magic_cube_files/static-cube.png">
+      <div id="upgradeText" class="bubble fadeTransition">
+        <div class="upgradetext">To play, please use the latest version of one of the following browsers</div>
+        <br><br>
+        <a class="upgradetext" href="https://www.google.com/chrome/browser/" target="_blank">Chrome</a><br>
+        <a class="upgradetext" href="https://www.mozilla.org/firefox" target="_blank">Firefox</a><br>
+        <a class="upgradetext" href="https://www.apple.com/safari" target="_blank">Safari</a><br>
+        <span class="pointerleft SPRITE_carrot_down_2x"></span>
+      </div>
+    </div>
+    <div id="uipanel" class="fadeTransition" style="opacity: 1;">
+      <div id="movecounter" style="display: none;">0</div>
+      <div id="buttonpanel" style="display: none;">
+        <div id="sharebubble" class="fadeTransition" style="opacity:0">
+          <input id="shareshortlink" type="text" value="google.com/doodles" readonly="readonly">
+          <div id="sharegplus" class="bubbleicon SPRITE_google_plus_64_2x"></div>
+          <div id="sharefacebook" class="bubbleicon SPRITE_facebook_64_2x"></div>
+          <div id="sharetwitter" class="bubbleicon SPRITE_twitter_64_2x"></div>
+          <div id="shareemail" class="bubbleicon SPRITE_email_64_2x"></div>
+        </div>
+        <div id="uibuttons">
+          <div id="sharebutton" class="bubbleicon SPRITE_share_64_2x"></div>
+          <div id="helpbutton" class="bubbleicon SPRITE_help_64_2x"></div>
+          <div id="searchbutton" class="bubbleicon SPRITE_search_64_2x"></div>
+        </div>
+      </div>
+      <div id="helpbubble" class="bubble" style="display:none" dir="">
+        <span class="pointerup SPRITE_carrot_grey_up_2x"></span>
+        <div id="helpimage" class="one"></div>
+        <div id="helptext" class="helptext"></div>
+        <div id="helpnext" class="helptext"></div>
+        <span class="pointerdown SPRITE_carrot_down_2x"></span><br>
+      </div>
+    </div>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/iecss3d.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/ierenderer.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/deviceMotion.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/locked.js"></script>
+    <!-- Certificate js -->
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/textBox.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/ResizeableTextBox.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/divBox.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/frames.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/certificate.js"></script>
+    <script charset="utf-8" src="http://cdn.atool.org/res/magic_cube_files/main.js"></script>
+</body>
+</html>
