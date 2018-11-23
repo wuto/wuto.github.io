@@ -91,5 +91,8 @@
 
    <!-- 页面点击小红心 -->
   <script type="text/javascript" src="/js/src/love.js"></script>
+  <!-- 页面切换标题变化 -->
+  <script type="text/javascript" src="/js/src/title.js"></script>
+
 </body>
 </html>
