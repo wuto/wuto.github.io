@@ -1,8 +1,10 @@
 ---
-title: 面向对象的六大原则
+title: 【Android源码设计模式解析与实战】面向对象的六大原则
 date: 2018-11-26 09:07:45
 tags:
+    【Android源码设计模式解析与实战】
 categories:
+    【Android源码设计模式解析与实战】
 ---
 
 
