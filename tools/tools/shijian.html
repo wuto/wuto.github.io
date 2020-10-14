@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Unix时间戳(Unix timestamp)转换工具 -  站长工具                                                                                                           	   现在的Unix时间戳(Unix timestamp)是：开始停止刷新">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/tools/tools/shijian.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Unix时间戳(Unix timestamp)转换工具 -  站长工具                                                                                                           	   现在的Unix时间戳(Unix timestamp)是：开始停止刷新">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-10-14T05:38:37.129Z">
+<meta property="article:modified_time" content="2020-10-14T05:38:37.129Z">
+<meta property="article:author" content="wuto">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/tools/tools/shijian.html"/>
+
+
+
+
+
+  <title> | Hexo</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tools">
+          <a href="/tools/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            工具
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline"></h1>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Unix时间戳(Unix timestamp)转换工具 -  站长工具</title>
+<meta name="keywords" content="Unix时间戳转换,时间戳转换工具"/>
+<meta name="description" content="Unix时间戳转换可以把Unix时间转成北京时间。"/>
+<!-- <script>
+    var jsurlbase = 'http://cdn.chinaz.com/tools/js';
+    var imgurlbase = 'http://cdn.chinaz.com/tools/images';
+    var styleurlbase = 'http://cdn.chinaz.com/tools/styles';
+</script> -->
+<!-- <script type="text/javascript" src="http://cdn.chinaz.com/common/js/mobilepage.js?v=201702"></script> -->
+<link rel="stylesheet" type="text/css" href="http://cdn.chinaz.com/common/styles/all-base.css?v=201607">
+<link rel="stylesheet" type="text/css" href="http://cdn.chinaz.com/common/styles/publicstyle.css?v=201607">
+<script type="text/javascript" src="http://cdn.chinaz.com/common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.chinaz.com/common/js/jq-public.js?v=201608"></script>
+
+<link rel="stylesheet" href="http://cdn.chinaz.com/tools/styles/toolstyle.css?v=201608" type="text/css"/>
+
+<script src="http://cdn.chinaz.com/tools/js/jq-tools.js?v=201608" type="text/javascript" charset="gb2312"></script>
+</head>
+
+<body>
+
+<!--ToolMain02-begin-->
+<div class="wrapper pt20 pb20"> 
+    <div class="CodingWrap auto">
+    <form name="unix">
+        <!--CodChangeWrap-begin--> 
+        <div class="CodChangeWrap clearfix">
+            
+            <div class="clearfix bg-blue10 ptb20">
+                 <div class="mb20 PresentTxt">
+              	   <p class="auto w570"><span class="fz16 col-blue02">现在的Unix时间戳(Unix timestamp)是：</span><span class="utspan col-hint" id="currentunixtime"></span><a href="javascript:" id="start">开始</a><a href="javascript:" id="stop">停止</a><a href="javascript:" id="refresh">刷新</a></p>
+                </div>  
+                <div class="clearfix miao w80-0" style=" margin:0 auto;">
+                <style>.pusmall .miao.w80-0{ width:87%;}</style>
+                    <div class=" Iew5 UnTimeW clearfix mb20" style=" overflow:visible;margin-bottom:40px;">
+                        <div class=" clearfix ml20">
+                            <div class="PosTxt clearfix"><label class="YaHei fz14 col-blue02">Unix时间戳（Unix timestamp）</label><input type="text" name="timestamp" id="firstTimestamp" tabindex="1" class="InputTxt w140" size="30" />
+                            <div class="fl lh30 plr5 pr15">
+                            <div class="MainCate-choese _ToolChoese">
+                            <div class="MainCateW-choese pr SearChoeseWrap w55"> 
+                                <div class="MainCateW-cont SearChoese w45">秒</div>
+                                <input type="hidden" value="0" id="unixtoutc8sel">
+                                <span class="MCicon-drop-down SearChoese"></span>
+                                <ul class="MainCateC-down SearChoese-show w55" style="display: none;">
+                                    <li><a val="0" href="javascript:">秒</a></li>
+                                    <li><a val="1" href="javascript:">毫秒</a></li>
+                                </ul>  
+                            </div>
+                        </div>
+                            </div>
+                            <input type="button" value="转换成北京时间" id="unixtoutc8" tabindex="2" class="InputBtnC col-blue02 plr10 mr20" /><input type="text" name="unixtoutc8result" size="30" class="InputTxt w140" readonly /></div>
+                        </div>
+                    </div>  
+
+                    <div class=" Iew5 UnTimeW clearfix mb20" style=" overflow:visible;margin-bottom:40px;">
+                        <div class=" clearfix ml20">
+                            <div class="PosTxt clearfix"><label class="YaHei fz14 col-blue02">北京时间（年/月/日 时:分:秒）</label><input type="text" name="utc8" id="utc8" tabindex="1" class="InputTxt w140 mr20" size="30" />
+                            <input type="button" value="转换成Unix时间戳" id="utc8tounix1" tabindex="2" class="InputBtnC col-blue02 plr5 mr20  ml10" /><input type="text" name="unixtoutc8result1" size="30" class="InputTxt w140" readonly />
+                            <div class="fl lh30 pl5">
+                            <div class="MainCate-choese _ToolChoese">
+                            <div class="MainCateW-choese pr SearChoeseWrap w55"> 
+                                <div class="MainCateW-cont SearChoese w45">秒</div>
+                                <input type="hidden" value="0" id="unixtoutc81sel">
+                                <span class="MCicon-drop-down SearChoese"></span>
+                                <ul class="MainCateC-down SearChoese-show w55" style="display: none;">
+                                    <li><a val="0" href="javascript:">秒</a></li>
+                                    <li><a val="1" href="javascript:">毫秒</a></li>
+                                </ul>  
+                            </div>
+                        </div>
+                            </div></div>
+                        </div>
+                    </div>  
+                     
+                    <div class=" Iew6 UnTimeW clearfix mb20" style=" overflow:visible">
+                        <div class="clearfix ml20">  
+                            <div class="ReveTxt clearfix"><label class="YaHei fz14 col-blue02">北京时间</label>
+                                <input type="text" class="InputTxt w50" size="2" tabindex="3" name="year" maxlength="4"/><label>年</label> 
+                                <input type="text" class="InputTxt w30" size="1" tabindex="4" name="month" maxlength="2"/><label>月</label> 
+                                <input type="text" class="InputTxt w30" size="1" tabindex="5" name="day" maxlength="2"/><label>日</label> 
+                                <input type="text" class="InputTxt w30" size="1" tabindex="6" name="hour" maxlength="2"/><label>时</label> 
+                                <input type="text" class="InputTxt w30" size="1" tabindex="7" name="minute" maxlength="2"/><label>分</label> 
+                                <input type="text" class="InputTxt w30" size="1" tabindex="8" name="second" maxlength="2"/><label>秒</label> 
+                                <input type="button" value="转换Unix时间戳" id="utc8tounix" tabindex="9" class="InputBtnC col-blue02 plr10 mr20" /><input type="text" name="utc8tounixresult" class="InputTxt w120 fl" size="25" readonly/>
+                                <div class="fl lh30 pl5">
+                            <div class="MainCate-choese _ToolChoese">
+                            <div class="MainCateW-choese pr SearChoeseWrap w55"> 
+                                <div class="MainCateW-cont SearChoese w45">秒</div>
+                                <input type="hidden" value="0" id="utc8tounixsel">
+                                <span class="MCicon-drop-down SearChoese"></span>
+                                <ul class="MainCateC-down SearChoese-show w55" style="display: none;">
+                                    <li><a val="0" href="javascript:">秒</a></li>
+                                    <li><a val="1" href="javascript:">毫秒</a></li>
+                                </ul>  
+                            </div>
+                        </div>
+                            </div>
+                            </div>
+                        </div>
+                   </div>   
+                   
+                </div>     
+                
+                 
+             </div>
+            
+        
+        
+        
+                <div class="unixtimeWrap">
+                
+                    <div class="utdHead">如何在不同编程语言中获取现在的Unix时间戳(Unix timestamp)？</div>
+                            
+                    <table>
+                      <tr>
+                        <td class="w26-0 uttd">Java</td>
+                        <td class="w73-0">time</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">JavaScript</td>
+                        <td class="w73-0"> Math.round(new Date().getTime()/1000)<br/>
+                          <span>getTime()返回数值的单位是毫秒</span></td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Microsoft .NET / C#</td>
+                        <td class="w73-0">epoch = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000000</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">MySQL</td>
+                        <td class="w73-0">SELECT unix_timestamp(now())</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Perl</td>
+                        <td class="w73-0">time</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">PHP</td>
+                        <td class="w73-0">time()</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">PostgreSQL</td>
+                        <td class="w73-0">SELECT extract(epoch FROM now())</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Python</td>
+                        <td class="w73-0"><span>先</span> import time <span>然后</span> time.time()</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Ruby</td>
+                        <td class="w73-0"><span>获取Unix时间戳：</span>Time.now <span>或</span> Time.new<br/>
+                          <span>显示Unix时间戳：</span>Time.now.to_i </td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">SQL Server</td>
+                        <td class="w73-0">SELECT DATEDIFF(s, '1970-01-01 00:00:00', GETUTCDATE())</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Unix / Linux</td>
+                        <td class="w73-0">date +%s</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">VBScript / ASP</td>
+                        <td class="w73-0">DateDiff("s", "01/01/1970 00:00:00", Now())</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd"> 其他操作系统<br/>
+                          <span style="font-weight:normal;font-size:12px;">(如果Perl被安装在系统中)</span></td>
+                        <td class="w73-0"><span>命令行状态：</span>perl -e "print time" </td>
+                      </tr>
+                    </table>
+                    <div class="utdHead">如何在不同编程语言中实现Unix时间戳(<i>Unix timestamp</i>) → 普通时间？</div>
+                    <table>
+                      <tr>
+                        <td class="w26-0 uttd">Java</td>
+                        <td class="w73-0">String date = new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date(<u>Unix timestamp</u> * 1000))</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">JavaScript</td>
+                        <td class="w73-0"><span>先</span> var unixTimestamp = new Date(<u>Unix timestamp</u> * 1000) <span>然后</span> commonTime = unixTimestamp.toLocaleString()</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Linux</td>
+                        <td class="w73-0">date -d @<u>Unix timestamp</u></td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">MySQL</td>
+                        <td class="w73-0">from_unixtime(<u>Unix timestamp</u>)</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Perl</td>
+                        <td class="w73-0"><span>先</span> my $time = <u>Unix timestamp</u> <span>然后</span> my ($sec, $min, $hour, $day, $month, $year) = (localtime($time))[0,1,2,3,4,5,6]</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">PHP</td>
+                        <td class="w73-0">date('r', <u>Unix timestamp</u>)</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">PostgreSQL</td>
+                        <td class="w73-0">SELECT TIMESTAMP WITH TIME ZONE 'epoch' + <u>Unix timestamp</u>) * INTERVAL '1 second';</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Python</td>
+                        <td class="w73-0"><span>先</span> import time <span>然后</span> time.gmtime(<u>Unix timestamp</u>)</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Ruby</td>
+                        <td class="w73-0">Time.at(<u>Unix timestamp</u>)</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">SQL Server</td>
+                        <td class="w73-0">DATEADD(s, <u>Unix timestamp</u>, '1970-01-01 00:00:00')</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">VBScript / ASP</td>
+                        <td class="w73-0">DateAdd("s", <u>Unix timestamp</u>, "01/01/1970 00:00:00")</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd"> 其他操作系统<br/>
+                          <span style="font-weight:normal;font-size:12px;">(如果Perl被安装在系统中)</span></td>
+                        <td class="w73-0"><span>命令行状态：</span>perl -e "print scalar(localtime(<u>Unix timestamp</u>))" </td>
+                      </tr>
+                    </table>
+                    <div class="utdHead">如何在不同编程语言中实现普通时间 → Unix时间戳(<i>Unix timestamp</i>)？</div>
+                    <table>
+                      <tr>
+                        <td class="w26-0 uttd">Java</td>
+                        <td class="w73-0">long epoch = new java.text.SimpleDateFormat("<u>dd/MM/yyyy HH:mm:ss</u>").parse("01/01/1970 01:00:00");</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">JavaScript</td>
+                        <td class="w73-0">var commonTime = new Date(Date.UTC(<u>year</u>, <u>month</u> - 1, <u>day</u>, <u>hour</u>, <u>minute</u>, <u>second</u>))</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">MySQL</td>
+                        <td class="w73-0"> SELECT unix_timestamp(<u>time</u>)<br/>
+                          <span>时间格式: YYYY-MM-DD HH:MM:SS 或 YYMMDD 或 YYYYMMDD</span></td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Perl</td>
+                        <td class="w73-0"><span>先</span> use Time::Local <span>然后</span> my $time = timelocal($sec, $min, $hour, $day, $month, $year);</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">PHP</td>
+                        <td class="w73-0">mktime(<u>hour</u>, <u>minute</u>, <u>second</u>, <u>month</u>, <u>day</u>, <u>year</u>)</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">PostgreSQL</td>
+                        <td class="w73-0">SELECT extract(epoch FROM date('<u>YYYY-MM-DD HH:MM:SS</u>'));</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Python</td>
+                        <td class="w73-0"><span>先</span> import time <span>然后</span> int(time.mktime(time.strptime('<u>YYYY-MM-DD HH:MM:SS</u>', '%Y-%m-%d %H:%M:%S')))</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Ruby</td>
+                        <td class="w73-0">Time.local(<u>year</u>, <u>month</u>, <u>day</u>, <u>hour</u>, <u>minute</u>, <u>second</u>)</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">SQL Server</td>
+                        <td class="w73-0">SELECT DATEDIFF(s, '1970-01-01 00:00:00', <u>time</u>)</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">Unix / Linux</td>
+                        <td class="w73-0">date +%s -d"Jan 1, 1970 00:00:01"</td>
+                      </tr>
+                      <tr>
+                        <td class="w26-0 uttd">VBScript / ASP</td>
+                        <td class="w73-0">DateDiff("s", "01/01/1970 00:00:00", <u>time</u>)</td>
+                      </tr>
+                    </table>
+                
+                
+                </div>
+        
+        
+        
+        
+ 		</div>
+        <!--CodChangeWrap-end-->
+    </form>
+    </div>
+</div>
+<!--ToolMain02-end-->
+<script>    ted.unixtime.init();</script>
+<!--footer-public-begin-->
+    <div class="wrapper mt10">
+         <div class="ToolAbout wrapper03">
+    <div class="clearfix"><h4 class="HeadH4 YaHei fz16 col-blue02 fwnone fl">工具简介</h4>
+     </div>
+    <div class="col-gray01 ToolAbCont">什么是Unix时间戳(Unix timestamp)： Unix时间戳(Unix timestamp)，或称Unix时间(Unix time)、POSIX时间(POSIX time)，是一种时间表示方式，定义为从格林威治时间1970年01月01日00时00分00秒起至现在的总秒数。Unix时间戳不仅被使用在Unix系统、类Unix系统中，也在许多其他操作系统中被广泛采用</div>
+    </div>
+        </div>
+    
+   
+</body>
+</html>
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">工具简介</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wuto</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+   <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <!-- 页面切换标题变化 -->
+  <script type="text/javascript" src="/js/src/title.js"></script>
+
+</body>
+</html>

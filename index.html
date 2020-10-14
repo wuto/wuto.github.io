@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="记录">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="记录">
+<meta property="og:locale">
+<meta property="article:author" content="wuto">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/"/>
+
+
+
+
+
+  <title>Hexo</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tools">
+          <a href="/tools/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            工具
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/14/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/10/14/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-14T13:38:36+08:00">
+                2020-10-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/10/14/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/12/03/%E3%80%90java%E7%AC%94%E8%AE%B0%E3%80%91java%E5%8F%8D%E5%B0%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/03/%E3%80%90java%E7%AC%94%E8%AE%B0%E3%80%91java%E5%8F%8D%E5%B0%84/" itemprop="url">【java笔记】java反射</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-03T13:45:29+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">java笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_38259539/article/details/71799078">https://blog.csdn.net/sinat_38259539/article/details/71799078</a></p>
+<h3 id="反射是框架设计的灵魂"><a href="#反射是框架设计的灵魂" class="headerlink" title="反射是框架设计的灵魂"></a>反射是框架设计的灵魂</h3><p>使用的前提条件：必须先得到代表的字节码的Class，Class类用于表示.class文件（字节码））</p>
+<h4 id="一、反射的概述"><a href="#一、反射的概述" class="headerlink" title="一、反射的概述"></a>一、反射的概述</h4><p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。<br>要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法.所以先要获取到每一个字节码文件对应的Class类型的对象.</p>
+<p>以上的总结就是什么是反射</p>
+<ul>
+<li>反射就是把java类中的各种成分映射成一个个的Java对象<br>例如：一个类有：成员变量、方法、构造方法、包等等信息，利用反射技术可以对一个类进行解剖，把个个组成部分映射成一个个对象。</li>
+</ul>
+<h4 id="三、反射的使用"><a href="#三、反射的使用" class="headerlink" title="三、反射的使用"></a>三、反射的使用</h4><h5 id="1、获取Class对象的三种方式"><a href="#1、获取Class对象的三种方式" class="headerlink" title="1、获取Class对象的三种方式"></a>1、获取Class对象的三种方式</h5><ul>
+<li>1.1 Object ——&gt; getClass();</li>
+<li>1.2 任何数据类型（包括基本数据类型）都有一个“静态”的class属性</li>
+<li>1.3 通过Class类的静态方法：forName（String  className）(常用)</li>
+</ul>
+<p>其中1.1是因为Object类中的getClass方法、因为所有类都继承Object类。从而调用Object类来获取</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package fanshe;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 获取Class对象的三种方式</span><br><span class="line"> * 1 Object ——&gt; getClass();</span><br><span class="line"> * 2 任何数据类型（包括基本数据类型）都有一个“静态”的class属性</span><br><span class="line"> * 3 通过Class类的静态方法：forName（String  className）(常用)</span><br><span class="line"> *</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Fanshe &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F;第一种方式获取Class对象  </span><br><span class="line">        Student stu1 &#x3D; new Student();&#x2F;&#x2F;这一new 产生一个Student对象，一个Class对象。</span><br><span class="line">        Class stuClass &#x3D; stu1.getClass();&#x2F;&#x2F;获取Class对象</span><br><span class="line">        System.out.println(stuClass.getName());</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;第二种方式获取Class对象</span><br><span class="line">        Class stuClass2 &#x3D; Student.class;</span><br><span class="line">        System.out.println(stuClass &#x3D;&#x3D; stuClass2);&#x2F;&#x2F;判断第一种方式获取的Class对象和第二种方式获取的是否是同一个</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;第三种方式获取Class对象</span><br><span class="line">        try &#123;</span><br><span class="line">            Class stuClass3 &#x3D; Class.forName(&quot;fanshe.Student&quot;);&#x2F;&#x2F;注意此字符串必须是真实路径，就是带包名的类路径，包名.类名</span><br><span class="line">            System.out.println(stuClass3 &#x3D;&#x3D; stuClass2);&#x2F;&#x2F;判断三种方式是否获取的是同一个Class对象</span><br><span class="line">        &#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：在运行期间，一个类，只有一个Class对象产生。</strong></p>
+<p>三种方式常用第三种，第一种对象都有了还要反射干什么。第二种需要导入类的包，依赖太强，不导包就抛编译错误。一般都第三种，一个字符串可以传入也可写在配置文件中等多种方法。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/12/03/%E3%80%90git%E7%AC%94%E8%AE%B0%E3%80%91%E5%88%86%E6%94%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/03/%E3%80%90git%E7%AC%94%E8%AE%B0%E3%80%91%E5%88%86%E6%94%AF/" itemprop="url">【git笔记】分支</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-03T10:07:03+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">git笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>git checkout -d dev</code></pre>
+<p>git checkout命令加上-b参数表示创建并切换，相当于以下</p>
+<h3 id="分支管理与策略"><a href="#分支管理与策略" class="headerlink" title="分支管理与策略"></a>分支管理与策略</h3><p>分支策略<br>在实际开发中，我们应该按照几个基本原则进行分支管理：</p>
+<p>首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；</p>
+<p>那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；</p>
+<p>你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。</p>
+<p>所以，团队合作的分支看起来就像这样：</p>
+<p>git-br-policy</p>
+<p>小结<br>Git分支十分强大，在团队开发中应该充分应用。</p>
+<p>合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
+<h3 id="bug分支"><a href="#bug分支" class="headerlink" title="bug分支"></a>bug分支</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/12/03/%E3%80%90Android%E7%AC%94%E8%AE%B0%E3%80%91service%E8%AF%A6%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/03/%E3%80%90Android%E7%AC%94%E8%AE%B0%E3%80%91service%E8%AF%A6%E8%A7%A3/" itemprop="url">【Android笔记】service详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-03T09:14:33+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">Android笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/huolongluo/p/6340743.html">https://www.cnblogs.com/huolongluo/p/6340743.html</a></p>
+<p>Service是Android中实现程序后台运行的解决方案，它非常适用于去执行那些不需要和用户交互而且还要求长期运行的任务。Service默认并不会运行在子线程中，它也不运行在一个独立的进程中，它同样执行在UI线程中，因此，不要在Service中执行耗时的操作，除非你在Service中创建了子线程来完成耗时操作，Service的运行不依赖于任何用户界面，即使程序被切换到后台或者用户打开另一个应用程序，Service仍然能够保持正常运行，这也正是Service的使用场景。当某个应用程序进程被杀掉时，所有依赖于该进程的Service也会停止运行。</p>
+<p>创建服务类：</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/27/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/27/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E7%AE%97%E6%B3%95/" itemprop="url">网易云音乐歌单算法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T16:08:03+08:00">
+                2018-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%9123%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%9123%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url">【Android源码设计模式解析与实战】23种设计模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T09:07:45+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91/" itemprop="url" rel="index">
+                    <span itemprop="name">【Android源码设计模式解析与实战】</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[TOC]</p>
+<h2 id="1-单例模式"><a href="#1-单例模式" class="headerlink" title="1. 单例模式"></a>1. 单例模式</h2><h2 id="2-builder模式"><a href="#2-builder模式" class="headerlink" title="2. builder模式"></a>2. builder模式</h2><h2 id="3-原型模式"><a href="#3-原型模式" class="headerlink" title="3. 原型模式"></a>3. 原型模式</h2><p>原型模式是一个创建型的模式。原型二字表明了该模式应该有一个样板实例，用户从这个样板对象中复制出一个内部属性一致的对象，这个过程就是我们俗称的“克隆”。被复制的实例就是我们所称的“原型”，这个原型是可定制的。原型模式多用于创建复杂的或者构造耗时的实例，因为这种情况下，复制一个已经存在的实例可使程序运行更高效。</p>
+<h4 id="浅拷贝和深拷贝"><a href="#浅拷贝和深拷贝" class="headerlink" title="浅拷贝和深拷贝"></a>浅拷贝和深拷贝</h4><p>浅拷贝也称为影子拷贝，这份拷贝实际上并不是将原始文档的所有字段都重新构造了一份，而是副本文档的字段引用原始文档的字段。</p>
+<p>在拷贝对象时，对于引用型的字段也要采用曹蓓的形式，而不是单纯引用的形式。</p>
+<p>使用clone和new需要根据构造对象的成本来决定，如果对象的构造成本比较高或者构造较为麻烦，那么clone()函数效率较高，否则可以使用new的形式，将原始对象作为构造函数的参数，然后在构造函数内将原始对象的数据逐个拷贝一遍。到此，整个克隆过程就完成了。</p>
+<h2 id="4-工厂方法模式"><a href="#4-工厂方法模式" class="headerlink" title="4. 工厂方法模式"></a>4. 工厂方法模式</h2><h3 id="4-1-工厂方法模式的介绍"><a href="#4-1-工厂方法模式的介绍" class="headerlink" title="4.1 工厂方法模式的介绍"></a>4.1 工厂方法模式的介绍</h3><p>工厂方法模式，是创建型设计模式之一，工厂方法模式是一种结构简单的模式，其在我们平时开发中应用很广泛。</p>
+<h3 id="4-2-工厂方法模式的定义"><a href="#4-2-工厂方法模式的定义" class="headerlink" title="4.2 工厂方法模式的定义"></a>4.2 工厂方法模式的定义</h3><p>定义一个用于创建对象的接口，让子类决定实例化哪个类。</p>
+<h3 id="4-3-工厂方法模式的使用场景"><a href="#4-3-工厂方法模式的使用场景" class="headerlink" title="4.3 工厂方法模式的使用场景"></a>4.3 工厂方法模式的使用场景</h3><p>在任何需要生成复杂对象的地方，都可以使用工厂方法模式。复杂对象适合使用工厂模式，用new就可以完成创建的对象无需使用工厂模式。</p>
+<h3 id="4-4-工厂方法模式"><a href="#4-4-工厂方法模式" class="headerlink" title="4.4 工厂方法模式"></a>4.4 工厂方法模式</h3><p>抽象工厂 具体工厂 抽象产品 具体产品 </p>
+<h2 id="5-抽象工厂模式"><a href="#5-抽象工厂模式" class="headerlink" title="5. 抽象工厂模式"></a>5. 抽象工厂模式</h2><h3 id="5-1-抽象工厂模式介绍"><a href="#5-1-抽象工厂模式介绍" class="headerlink" title="5.1 抽象工厂模式介绍"></a>5.1 抽象工厂模式介绍</h3><p>抽象工厂模式，也是创建型设计模式之一。</p>
+<h3 id="5-2-抽象工厂模式的定义"><a href="#5-2-抽象工厂模式的定义" class="headerlink" title="5.2 抽象工厂模式的定义"></a>5.2 抽象工厂模式的定义</h3><p>为创建一组相关或者是相互依赖的对象提供一个接口，而不是需要指定他们的具体类</p>
+<h3 id="5-3-抽象工厂模式的使用场景"><a href="#5-3-抽象工厂模式的使用场景" class="headerlink" title="5.3 抽象工厂模式的使用场景"></a>5.3 抽象工厂模式的使用场景</h3><p>一个对象</p>
+<h2 id="6-策略模式"><a href="#6-策略模式" class="headerlink" title="6. 策略模式"></a>6. 策略模式</h2><h2 id="7-状态模式"><a href="#7-状态模式" class="headerlink" title="7. 状态模式"></a>7. 状态模式</h2><h2 id="8-责任链模式"><a href="#8-责任链模式" class="headerlink" title="8. 责任链模式"></a>8. 责任链模式</h2><h2 id="9-解释器模式"><a href="#9-解释器模式" class="headerlink" title="9. 解释器模式"></a>9. 解释器模式</h2><h2 id="10-命令模式"><a href="#10-命令模式" class="headerlink" title="10. 命令模式"></a>10. 命令模式</h2><h2 id="11-观察者模式"><a href="#11-观察者模式" class="headerlink" title="11. 观察者模式"></a>11. 观察者模式</h2><h2 id="12-备忘录模式"><a href="#12-备忘录模式" class="headerlink" title="12. 备忘录模式"></a>12. 备忘录模式</h2><h2 id="13-迭代器模式"><a href="#13-迭代器模式" class="headerlink" title="13. 迭代器模式"></a>13. 迭代器模式</h2><h2 id="14-模板方法模式"><a href="#14-模板方法模式" class="headerlink" title="14. 模板方法模式"></a>14. 模板方法模式</h2><h2 id="15-访问者模式"><a href="#15-访问者模式" class="headerlink" title="15. 访问者模式"></a>15. 访问者模式</h2><h2 id="16-中介者模式"><a href="#16-中介者模式" class="headerlink" title="16. 中介者模式"></a>16. 中介者模式</h2><h2 id="17-代理模式"><a href="#17-代理模式" class="headerlink" title="17. 代理模式"></a>17. 代理模式</h2><h2 id="18-组合模式"><a href="#18-组合模式" class="headerlink" title="18. 组合模式"></a>18. 组合模式</h2><h2 id="19-适配器模式"><a href="#19-适配器模式" class="headerlink" title="19. 适配器模式"></a>19. 适配器模式</h2><h2 id="20-装饰模式"><a href="#20-装饰模式" class="headerlink" title="20. 装饰模式"></a>20. 装饰模式</h2><h2 id="21-享元模式"><a href="#21-享元模式" class="headerlink" title="21. 享元模式"></a>21. 享元模式</h2><h2 id="22-外观模式"><a href="#22-外观模式" class="headerlink" title="22. 外观模式"></a>22. 外观模式</h2><h2 id="23-桥接模式"><a href="#23-桥接模式" class="headerlink" title="23. 桥接模式"></a>23. 桥接模式</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91MVC%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%9E%E6%88%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91MVC%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%9E%E6%88%98/" itemprop="url">【Android源码设计模式解析与实战】MVC介绍与实战</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T09:07:45+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91/" itemprop="url" rel="index">
+                    <span itemprop="name">【Android源码设计模式解析与实战】</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[TOC]</p>
+<h3 id="1-MVC的起源与历史"><a href="#1-MVC的起源与历史" class="headerlink" title="1.MVC的起源与历史"></a>1.MVC的起源与历史</h3><p>MVC全称是Model-View-Controller也就是模型-视图-控制器，在1970年的时候由TrygveReenskaug在Smalltalk-80系统上首次提出，最开始的时候并不是叫MVC，而是MVCE，也就是在Model-View-Controller中多了一个额外的Editor，最初的MVC理念u现在的其实相差不大，其目的都是为了将数据模型和视图分离开来，并以控制器作为连接两者的桥梁以实现解耦，三十，那时候的MVC实现与现在有很大的差别，因为在当时那个年代计算机还只是个只会显示一行行代码的命令机器，那时还没有GUI的概念，因此，那个年代MVC刚提出的时候其实现是以Model为中心的，当Model发生改变后View和Controller都会接到Model改变的通知。后来随着计算机的发展，GUI图形化界面开始出现，MVC的实现方式也随之改变，但不管怎么改变都不会影响到Model-View-Controller这样的框架结构。</p>
+<p>MVC是一种框架模式而非设计模式，GOF把MVC看作是3种设计模式：观察者模式、策略模式与组合模式的合体，而且其核心在观察者模式，也就是一个基于发布/订阅者模型的框架，很多时候在实际开发过程中我们常常还会在MVC框架中使用到其他的设计模式。那么框架模式与设计模式的区别又在何处呢？经常会听到这样或那样的框架，比如注解框架、通信框架、数据存储框架等通用性较强的框架，还有一些面向后端开发的，如Struts、Spring等框架，在这些框架中你常常会见到很多设计模式的应用。对框架来说，通常是对代码的重用， 而对设计来说通常是对设计的重用，可能会比较拗口，你可以简单地这样理解框架面向于一系列相同行为代码的重用，而设计则面向的是一系列相同结构代码的重用，我们平时所说的架构则介于框架与设计之间。在软件开发领域有三种级别的重用：内部重用，即在同一应用钟恩能够公共使用的抽象块；代码重用，即将通用模块组合成库或工具集，以便在多个应用和领域都能使用；应用框架的重用，即为专用领域提供通用的或现成的基础结构，以获得最高级别的重用性。我们平时开发过程中比较常见的框架模式除了MVC以外还有MVVC、MTV、CBD、ORM以及MVP。简而言之：框架是大智慧，用来对软件设计进行分工；设计模式是小技巧，对具体问题提出解决方案，以提高代码复用率，降低耦合度。</p>
+<p>MVC的优点很多，首先第一个就是理解起来比较容易，技术含量并不高，这对开发和维护来说成本较低也易于维护和修改，其次则是耦合性不高，表现层与业务层分离实现各司其职，对开发来说也是很有利，前端工程师专注界面的研发，后端工程师则致力于业务逻辑的完善等。而对于MVC的缺点也有很多，由于它没有明确的定义，所以完全理解MVC模式并不是很容易。使用MVC模式需要精心计划，由于它的内部原理比较复杂，所以需要花费一些时间去思考。开发一个MVC模式架构的工程，将不得不花费相当可观的时间去考虑如何将MVC模式运用到应用程序中，同时由于Model和View要严格分离，这样也给调试应用程序带来了一定的困难。每个构件在使用之前都要经过彻底的测试。另外，由于MVC模式将一个应用程序分成了3个部件，所以，这意味着同一个工程将包含比以前更多的文件。因此，对于一些小规模的项目，MVC反而会带来更大的工作量以及复杂性。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91MVP%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91MVP%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/" itemprop="url">【Android源码设计模式解析与实战】MVP应用架构模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T09:07:45+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91/" itemprop="url" rel="index">
+                    <span itemprop="name">【Android源码设计模式解析与实战】</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-MVP模式介绍"><a href="#1-MVP模式介绍" class="headerlink" title="1.MVP模式介绍"></a>1.MVP模式介绍</h3><p>MVP是MVC的一个演化版本，MVP全称Model View Presenter。MVP能够有效地降低View的复杂性，避免业务逻辑被塞进View中，使得View变成一个混乱的“大泥坑”。MVP模式会解除View与Model的耦合，同时又带来了良好的可扩展性、可测试性，保证了系统的整洁性、灵活性。可能对于简单的应用来说MVP模式稍显麻烦，各种各样的接口与概念，使得整个应用充斥着零散的接口，但是对于比较复杂的应用来说，MVP模式是一种良好的架构模式，它能够非常好地组织应用架构，使得应用变得灵活，拥抱变化。</p>
+<p>MVP模式可以分离显示层和逻辑层，它们之间通过接口进行通信，降低耦合。理想化的MVP模式可以实现同一份逻辑代码搭配不同的显示界面，因为他们之间并不依赖于具体，而是依赖于抽象。这使得Presenter可以运用于任何实现了View逻辑接口的UI，使之具体更广泛的适用性，保证了灵活性。</p>
+<p>我们知道在Android上，业务逻辑和数据存取是耦合的，很多缺乏经验的工程师很可能会将各种各样的业务逻辑塞进某个Activity、Fragment或者自定义的View中，使得这些组件的单个类型臃肿不堪，其中又含有一些异步任务，导致某个类超过千行代码。当然，对于功能复杂的应用来说，一个类超过千行代码不是什么大惊小怪的事，我们所要指出的重点是业务逻辑与View元素严重耦合在一起导致了类臃肿的问题。</p>
+<p>对于一个可扩展、稳定的应用来说，我们需要定义分离各个层，主要是UI层、业务逻辑层和数据层。毕竟，我们不知道以后要加入什么逻辑，是以本地数据库检索数据？还是从远程的服务器中？我们的UI、数据库是否会被替换？例如，随着产品的升级，我们的UI可能会被重新设计，若UI发生了变化，此时由于业务逻辑耦合在View中，UI变化导致我们修改新的View控件，此时你就需要到原来的View中抽离具体的业务逻辑，这将是一件非常折磨人也易于出错的事，到最终你还是需要将业务逻辑抽离开来。</p>
+<p>MVP模式可以让UI界面和数据分离，我们的应用至少可以分为三层，这样使得我们也可以对这三个层次进行独立的单元测试。MVP模式可以让我们从Activity、Fragment等View角色中分离大部分代码，使得每个类型的代码量大幅度减少，职责单一，易于维护。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/" itemprop="url">【Android源码设计模式解析与实战】面向对象的六大原则</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T09:07:45+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91/" itemprop="url" rel="index">
+                    <span itemprop="name">【Android源码设计模式解析与实战】</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[TOC]</p>
+<h3 id="1-单一职责原则"><a href="#1-单一职责原则" class="headerlink" title="1.单一职责原则"></a>1.单一职责原则</h3><p>单一职责原则的英文名称是Single Responsibility Principe，缩写是SRP。SRP的定义是：就一个类而言，应该仅有一个引起他变化的原因。简单来说，一个类应该是一组相关性很高的函数、数据的封装。</p>
+<p>单一职责所表达出的用意就是“单一”二字。正如上文所说，如何划分一个类、一个函数的职责，每个人都有自己的看法，这需要根据个人经验、具体的业务逻辑而定。但是，他也有一些基本的指导原则，例如，两个完全不一样的功能就不应该放在一个类中。一个类中应该是一组相关性很高的函数、数据的封装。根据具体的业务、功能对类进行相应的拆分，这是优化代码的第一步。</p>
+<h3 id="2-开闭原则"><a href="#2-开闭原则" class="headerlink" title="2.开闭原则"></a>2.开闭原则</h3><p>开闭原则英文全称是Open Close Principle , 缩写是OCP，它是Java世界里最基础的设计原则，它指导我们如何建立一个稳定的，灵活地系统。开闭原则的定义是：软件中的对象（类、模块、函数等）应该对于扩展是开放的，但是，对于修改是封闭的。在软件的生命周期内，因为变化、升级和维护等原因需要对软件原有代码进行修改时，可能会将错误引入原本已经经过测试的旧代码中，破坏原有系统。因此，当软件需要变化时，我们应该尽量通过扩展的方式来实现变化，而不是通过修改已有的代码来实现。当然，在现实开发中，只通过继承的方式来升级、维护原有系统只是一个理想化的愿景，因此，在实际的开发过程中，修改原有代码、扩展代码往往是同时存在的。</p>
+<p>软件开发过程中，最不会变化的就是变化本身。产品需要不断地升级、维护，没有一个产品从第一版本开发完就再也没有变化了，除非在下个版本诞生之前它已经被终止。而产品需要升级，修改原来的到吗就可能会引发其他的问题。那么，如何确保原有软件模块的正确性，以及尽量少地影响原有模块，答案就是，尽量遵守本章讲述的开闭原则。</p>
+<p>开闭原则认为，程序一旦开发完成，程序中一个类的实现只应该因错误而被修改，新的或者改变的特性应该通过新建不同的类实现，新建的类可以通过集成的方式来重用原类的代码。显然开闭原则定义提倡实现继承，已存在的实现类对于修改是封闭的，但是新的实现类可以通过覆写父类的接口应对变化。</p>
+<p>可扩展性是框架的最重要特性之一。</p>
+<p>软件中的对象（类、模块、函数等）应该对于扩展是开放的，但是对于修改是封闭的，这就是开放–关闭原则。也就是说，当软件需要变化时，我们应该尽量通过扩展的方式来实现变化，而不是通过修改已有的代码来实现。</p>
+<p>开闭原则指导我们，当软件需要变化时，应该尽量通过扩展的方式来实现变化，而不是通过修改已有代码来实现。这里的“应该尽量”4个字说明OCP原则并不是说绝对不可以修改原始类的。当我们嗅到原有的代码“腐化气味”时，应该尽早地重构，以便使代码恢复到正常的“进化”过程，而不是通过继承等方式添加新的实现，这会导致类型的膨胀以及历史遗留代码的冗余。我们的开发过程中也没有那么理想化的状况，完全不用修改原来的代码，因此，在开发过程中需要自己结合具体情况进行考量，是通过修改旧代码还是通过继承使得软件系统更稳定、更领会，在保证去除“代码腐化”的同时，也保证原有模块的正确性。</p>
+<h3 id="3-里氏替换原则"><a href="#3-里氏替换原则" class="headerlink" title="3.里氏替换原则"></a>3.里氏替换原则</h3><p>里氏替换原则英文全称是 Liskov Substitution Principle , 缩写是LSP。LSP的第一种定义是：如果对每一个类型为s的对象O1，都有类型为T的对象O2，使得以T定义的所有程序P在所有的对象O1都代换成O2时，程序P的行为没有发生变化，那么类型S是类型T的子类型。上面这种描述确实不好理解。里氏替换原则第二种定义：所有引用基类的地方必须能透明地使用其子类的对象。</p>
+<p>面向对象的语言的三大特点是继承、封装、多态，里氏替换原则就是依赖于继承、多态这两大特性。里氏替换原则简单来说就是，所有引用基类的地方必须能透明地使用其子类的对象。通俗点讲，只要父类能出现的地方子类就可以出现，而且替换为子类也不会产生任何错误或异常，使用者可能根本就不需要知道是父类还是子类。但是反过来就不行了，有子类出现的地方，父类未必就能适应。（抽象）</p>
+<p>里氏替换原则的核心原理是抽象，抽象又依赖于继承这个特性，在OOP当中，继承的优缺点都相当明显。优点有以下几点：</p>
+<p>（1）代码重用，减少创建类的成本，每个子类都拥有父类的方法和属性；</p>
+<p>（2）子类与父类基本相似，但又与父类有所区别；</p>
+<p>（3）提高代码的可扩展性。</p>
+<p>继承的缺点：</p>
+<p>（1）继承是侵入性的，只要继承就必须拥有父类的所有属性和方法；</p>
+<p>（2）可能造成子类代码冗余、灵活性降低，因为子类必须用户父类的属性和方法。</p>
+<p>事物总是具有两面性的，如何权衡利弊都是需要根据具体情况来做出选择并加以处理。里氏替换原则指导我们构建扩展性更好的软件系统。</p>
+<p>建立抽象，通过抽象建立规范，具体的实现在运行时替换掉抽象，保证系统的可扩展性、灵活性。开闭原则和里氏替换原则往往是生死相依、不离不弃的，通过里氏替换来达到对扩展开放，对修改关闭的效果。然而，这两个原则都同时强调了一个OOP的重要特性—抽象，因此，在开发过程中运用抽象是走向代码优化的重要一步。</p>
+<h3 id="4-依赖倒置原则"><a href="#4-依赖倒置原则" class="headerlink" title="4.依赖倒置原则"></a>4.依赖倒置原则</h3><p>依赖倒置原则英文全称是Dependence Inversion Principle，缩写是DIP。依赖倒置原则指代了一种特定的解耦形式，使得高层次的模块不依赖与低层次的模块的实现细节的目的，依赖模块被颠倒了。</p>
+<p>依赖倒置原则有以下几个关键字：</p>
+<p>（1）高层模块不应该依赖低层模块，两者都应该依赖其抽象；</p>
+<p>（2）抽象不应该依赖细节；</p>
+<p>（3）细节应该依赖抽象。</p>
+<p>在Java语言中，抽象就是指接口或抽象类，两者都是不能直接被实例化的；细节就是实现类，实现接口或继承抽象类而产生的类就是细节，其特点就是，可以直接被实例化，也就是可以加上一个关键字new 产生一个对象。高层模块就是调用端，低层模块就是具体实现类。依赖倒置原则在Java语言中的表现就是：<strong>模块间的依赖通过抽象发生，实现类之间不发生直接的依赖关系，其依赖关系是通过接口或抽象类产生的</strong>。这又是一个将理论抽象化的实例，其实一句话就可以概括：面向接口编程，或者说是面向抽象编程，这里的抽象指的是接口或者抽象类。面向接口编程是面向对象精髓之一，也就是上面两节强调的抽象。</p>
+<p>如果类与类直接依赖于细节，那么他们之间就有直接的耦合，当具体实现需要变化时，意味着要同时修改依赖者的代码，这限制了系统的可扩展性。</p>
+<h3 id="5-接口隔离原则"><a href="#5-接口隔离原则" class="headerlink" title="5.接口隔离原则"></a>5.接口隔离原则</h3><p>接口隔离原则英文全称是InterfaceSegregation Principe，缩写是ISP。ISP的定义是：客户端不应该依赖它不需要的接口。另一种定义是：类间的依赖关系应该建立在最小的接口上。接口隔离原则将非常庞大、臃肿的接口拆分成更小的和更具体的接口，这样客户将会只需要知道他们感兴趣的方法。接口隔离原则的目的是系统解开耦合，从而容易重构、更改和重新部署。</p>
+<p>接口隔离原则说白了就是，让客户端依赖的接口尽可能地小。</p>
+<p>单一职责、开闭原则、里氏替换、接口隔离以及依赖倒置（也称依赖反转）5个原则定义为SOLID原则，作为面向对象编程的5个基本原则。当这些原则被遗弃应用时，它们使得一个软件系统更清晰、简单，最大程度地拥抱变化。SOLID被典型地应用在测试驱动开发上，并且是敏捷开发以及自适应软件开发基本原则的重要组成部分。这几大原则最终可以化为这几个关键词：抽象、单一职责、最小化。那么，在实际开发过程中如何权哥、实践这些原则，需要不断去思考与领悟。</p>
+<h3 id="6-迪米特原则"><a href="#6-迪米特原则" class="headerlink" title="6.迪米特原则"></a>6.迪米特原则</h3><p>迪米特原则应为全称为Law of Demeter，缩写是LOD，也称为最少知识原则（Least KnowLedge Principe）。虽然名字不同，但描述的是同一个原则：一个对象应该对其他对象有最少的了解。通俗地将，一个类应该对自己需要耦合或调用的类知道得最少。类的内部如何实现与调用者或者依赖者没关系，调用者或者依赖者只需要知道它需要的方法即可，其他的可一概不用管。类与类之间的关系越密切，耦合度越大，当一个类发生改变时，对一个类的影响也越大。</p>
+<p>迪米特法则还有一个英文解释是Only talk to your immedate friends ，翻译过来就是：只与直接的朋友通信。什么叫做直接的朋友呢？每个对象都必然会与其他对象有耦合关系，两个对象之间的耦合就称为朋友关系，这种关系的类型有很多，如组合、聚合、依赖等。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/26/%E9%98%BF%E8%8E%B1%E6%96%AF%E6%82%96%E8%AE%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/%E9%98%BF%E8%8E%B1%E6%96%AF%E6%82%96%E8%AE%BA/" itemprop="url">阿莱斯悖论</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T09:07:45+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>阿莱斯悖论：</p>
+<p>确定性效应</p>
+<p>预期效用理论</p>
+<p>更高的收益和稳定的</p>
+<p>决策权重</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wuto</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+   <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <!-- 页面切换标题变化 -->
+  <script type="text/javascript" src="/js/src/title.js"></script>
+
+</body>
+</html>
