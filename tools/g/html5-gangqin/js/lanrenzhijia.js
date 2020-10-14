@@ -1,4 +1,4 @@
-/* 代码整理：懒人之家 www.lanrenzhijia.com */
+﻿/* 代码整理：懒人之家 www.lanrenzhijia.com */
 	
 	var html5webPiano = {};
 	

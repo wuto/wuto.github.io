@@ -1,12 +1,12 @@
-/*! Ò»Ò¶ï¿½ï¿½ï¿½ï¿½ | qq:28701884 | ï¿½ï¿½Ó­Ö¸ï¿½ï¿½ */
+/*! Ò»Ò¶¹ÂÖÛ | qq:28701884 | »¶Ó­Ö¸½Ì */
 
 var bill = bill || {};
-/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ www.lanrenzhijia.com */
-//ï¿½ï¿½Ê¼ï¿½ï¿½
+/* ´úÂëÕûÀí£ºÀÁÈËÖ®¼Ò www.lanrenzhijia.com */
+//³õÊ¼»¯
 bill.init = function (){
 	if (com.store){
 		clearInterval(bill.timer);
-		bill.setBillList(com.arr2Clone(com.initMap)); //Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½
+		bill.setBillList(com.arr2Clone(com.initMap)); //Ğ´ÈëÆåÆ×ÁĞ±í
 		play.isPlay=false;	
 		com.show();
 	}else {
@@ -15,12 +15,12 @@ bill.init = function (){
 }
 
 
-//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½
+//°ÑËùÓĞÆåÆ×Ğ´ÈëÆåÆ×ÁĞ±í
 bill.setBillList = function (map){
 	var list=com.get("billList")
 	for (var i=0; i < com.store.length ; i++){
 		var option = document.createElement('option');
-		 option.text='ï¿½ï¿½ï¿½ï¿½'+(i+1);
+		 option.text='ÆåÆ×'+(i+1);
 		 option.value=i;
 		list.add(option , null);
 	}
@@ -32,7 +32,7 @@ bill.setBillList = function (map){
 }
 
 
-//ï¿½ï¿½ï¿½×·ï¿½ï¿½ï¿½ Ğ´ï¿½ï¿½
+//ÆåÆ×·ÖÎö Ğ´Èë
 bill.setMove = function (bl,inx,map){
 	var map = com.arr2Clone(map);
 	for (var i=0; i<map.length; i++){
@@ -69,7 +69,7 @@ bill.setMove = function (bl,inx,map){
 	return map;
 }
 
-//Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//Ğ´ÈëÆåÆ×
 bill.setBox = function (bl,initMap){
 	var map = com.arr2Clone(initMap);
 	var bl= bl.split("");
@@ -96,4 +96,4 @@ bill.setBox = function (bl,initMap){
 		})
 	}
 
-}/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ www.lanrenzhijia.com */
+}/* ´úÂëÕûÀí£ºÀÁÈËÖ®¼Ò www.lanrenzhijia.com */

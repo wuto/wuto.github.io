@@ -1123,6 +1123,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91MVP%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91MVP%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/" itemprop="url">【Android源码设计模式解析与实战】MVP应用架构模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T09:07:45+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91/" itemprop="url" rel="index">
+                    <span itemprop="name">【Android源码设计模式解析与实战】</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-MVP模式介绍"><a href="#1-MVP模式介绍" class="headerlink" title="1.MVP模式介绍"></a>1.MVP模式介绍</h3><p>MVP是MVC的一个演化版本，MVP全称Model View Presenter。MVP能够有效地降低View的复杂性，避免业务逻辑被塞进View中，使得View变成一个混乱的“大泥坑”。MVP模式会解除View与Model的耦合，同时又带来了良好的可扩展性、可测试性，保证了系统的整洁性、灵活性。可能对于简单的应用来说MVP模式稍显麻烦，各种各样的接口与概念，使得整个应用充斥着零散的接口，但是对于比较复杂的应用来说，MVP模式是一种良好的架构模式，它能够非常好地组织应用架构，使得应用变得灵活，拥抱变化。</p>
+<p>MVP模式可以分离显示层和逻辑层，它们之间通过接口进行通信，降低耦合。理想化的MVP模式可以实现同一份逻辑代码搭配不同的显示界面，因为他们之间并不依赖于具体，而是依赖于抽象。这使得Presenter可以运用于任何实现了View逻辑接口的UI，使之具体更广泛的适用性，保证了灵活性。</p>
+<p>我们知道在Android上，业务逻辑和数据存取是耦合的，很多缺乏经验的工程师很可能会将各种各样的业务逻辑塞进某个Activity、Fragment或者自定义的View中，使得这些组件的单个类型臃肿不堪，其中又含有一些异步任务，导致某个类超过千行代码。当然，对于功能复杂的应用来说，一个类超过千行代码不是什么大惊小怪的事，我们所要指出的重点是业务逻辑与View元素严重耦合在一起导致了类臃肿的问题。</p>
+<p>对于一个可扩展、稳定的应用来说，我们需要定义分离各个层，主要是UI层、业务逻辑层和数据层。毕竟，我们不知道以后要加入什么逻辑，是以本地数据库检索数据？还是从远程的服务器中？我们的UI、数据库是否会被替换？例如，随着产品的升级，我们的UI可能会被重新设计，若UI发生了变化，此时由于业务逻辑耦合在View中，UI变化导致我们修改新的View控件，此时你就需要到原来的View中抽离具体的业务逻辑，这将是一件非常折磨人也易于出错的事，到最终你还是需要将业务逻辑抽离开来。</p>
+<p>MVP模式可以让UI界面和数据分离，我们的应用至少可以分为三层，这样使得我们也可以对这三个层次进行独立的单元测试。MVP模式可以让我们从Activity、Fragment等View角色中分离大部分代码，使得每个类型的代码量大幅度减少，职责单一，易于维护。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%9123%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1373,152 +1519,6 @@
 <h3 id="1-MVC的起源与历史"><a href="#1-MVC的起源与历史" class="headerlink" title="1.MVC的起源与历史"></a>1.MVC的起源与历史</h3><p>MVC全称是Model-View-Controller也就是模型-视图-控制器，在1970年的时候由TrygveReenskaug在Smalltalk-80系统上首次提出，最开始的时候并不是叫MVC，而是MVCE，也就是在Model-View-Controller中多了一个额外的Editor，最初的MVC理念u现在的其实相差不大，其目的都是为了将数据模型和视图分离开来，并以控制器作为连接两者的桥梁以实现解耦，三十，那时候的MVC实现与现在有很大的差别，因为在当时那个年代计算机还只是个只会显示一行行代码的命令机器，那时还没有GUI的概念，因此，那个年代MVC刚提出的时候其实现是以Model为中心的，当Model发生改变后View和Controller都会接到Model改变的通知。后来随着计算机的发展，GUI图形化界面开始出现，MVC的实现方式也随之改变，但不管怎么改变都不会影响到Model-View-Controller这样的框架结构。</p>
 <p>MVC是一种框架模式而非设计模式，GOF把MVC看作是3种设计模式：观察者模式、策略模式与组合模式的合体，而且其核心在观察者模式，也就是一个基于发布/订阅者模型的框架，很多时候在实际开发过程中我们常常还会在MVC框架中使用到其他的设计模式。那么框架模式与设计模式的区别又在何处呢？经常会听到这样或那样的框架，比如注解框架、通信框架、数据存储框架等通用性较强的框架，还有一些面向后端开发的，如Struts、Spring等框架，在这些框架中你常常会见到很多设计模式的应用。对框架来说，通常是对代码的重用， 而对设计来说通常是对设计的重用，可能会比较拗口，你可以简单地这样理解框架面向于一系列相同行为代码的重用，而设计则面向的是一系列相同结构代码的重用，我们平时所说的架构则介于框架与设计之间。在软件开发领域有三种级别的重用：内部重用，即在同一应用钟恩能够公共使用的抽象块；代码重用，即将通用模块组合成库或工具集，以便在多个应用和领域都能使用；应用框架的重用，即为专用领域提供通用的或现成的基础结构，以获得最高级别的重用性。我们平时开发过程中比较常见的框架模式除了MVC以外还有MVVC、MTV、CBD、ORM以及MVP。简而言之：框架是大智慧，用来对软件设计进行分工；设计模式是小技巧，对具体问题提出解决方案，以提高代码复用率，降低耦合度。</p>
 <p>MVC的优点很多，首先第一个就是理解起来比较容易，技术含量并不高，这对开发和维护来说成本较低也易于维护和修改，其次则是耦合性不高，表现层与业务层分离实现各司其职，对开发来说也是很有利，前端工程师专注界面的研发，后端工程师则致力于业务逻辑的完善等。而对于MVC的缺点也有很多，由于它没有明确的定义，所以完全理解MVC模式并不是很容易。使用MVC模式需要精心计划，由于它的内部原理比较复杂，所以需要花费一些时间去思考。开发一个MVC模式架构的工程，将不得不花费相当可观的时间去考虑如何将MVC模式运用到应用程序中，同时由于Model和View要严格分离，这样也给调试应用程序带来了一定的困难。每个构件在使用之前都要经过彻底的测试。另外，由于MVC模式将一个应用程序分成了3个部件，所以，这意味着同一个工程将包含比以前更多的文件。因此，对于一些小规模的项目，MVC反而会带来更大的工作量以及复杂性。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91MVP%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91MVP%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/" itemprop="url">【Android源码设计模式解析与实战】MVP应用架构模式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T09:07:45+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E3%80%90Android%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%91/" itemprop="url" rel="index">
-                    <span itemprop="name">【Android源码设计模式解析与实战】</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-MVP模式介绍"><a href="#1-MVP模式介绍" class="headerlink" title="1.MVP模式介绍"></a>1.MVP模式介绍</h3><p>MVP是MVC的一个演化版本，MVP全称Model View Presenter。MVP能够有效地降低View的复杂性，避免业务逻辑被塞进View中，使得View变成一个混乱的“大泥坑”。MVP模式会解除View与Model的耦合，同时又带来了良好的可扩展性、可测试性，保证了系统的整洁性、灵活性。可能对于简单的应用来说MVP模式稍显麻烦，各种各样的接口与概念，使得整个应用充斥着零散的接口，但是对于比较复杂的应用来说，MVP模式是一种良好的架构模式，它能够非常好地组织应用架构，使得应用变得灵活，拥抱变化。</p>
-<p>MVP模式可以分离显示层和逻辑层，它们之间通过接口进行通信，降低耦合。理想化的MVP模式可以实现同一份逻辑代码搭配不同的显示界面，因为他们之间并不依赖于具体，而是依赖于抽象。这使得Presenter可以运用于任何实现了View逻辑接口的UI，使之具体更广泛的适用性，保证了灵活性。</p>
-<p>我们知道在Android上，业务逻辑和数据存取是耦合的，很多缺乏经验的工程师很可能会将各种各样的业务逻辑塞进某个Activity、Fragment或者自定义的View中，使得这些组件的单个类型臃肿不堪，其中又含有一些异步任务，导致某个类超过千行代码。当然，对于功能复杂的应用来说，一个类超过千行代码不是什么大惊小怪的事，我们所要指出的重点是业务逻辑与View元素严重耦合在一起导致了类臃肿的问题。</p>
-<p>对于一个可扩展、稳定的应用来说，我们需要定义分离各个层，主要是UI层、业务逻辑层和数据层。毕竟，我们不知道以后要加入什么逻辑，是以本地数据库检索数据？还是从远程的服务器中？我们的UI、数据库是否会被替换？例如，随着产品的升级，我们的UI可能会被重新设计，若UI发生了变化，此时由于业务逻辑耦合在View中，UI变化导致我们修改新的View控件，此时你就需要到原来的View中抽离具体的业务逻辑，这将是一件非常折磨人也易于出错的事，到最终你还是需要将业务逻辑抽离开来。</p>
-<p>MVP模式可以让UI界面和数据分离，我们的应用至少可以分为三层，这样使得我们也可以对这三个层次进行独立的单元测试。MVP模式可以让我们从Activity、Fragment等View角色中分离大部分代码，使得每个类型的代码量大幅度减少，职责单一，易于维护。</p>
 
           
         

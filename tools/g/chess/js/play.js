@@ -1,28 +1,28 @@
-/*! Ò»Ò¶ï¿½ï¿½ï¿½ï¿½ | qq:28701884 | ï¿½ï¿½Ó­Ö¸ï¿½ï¿½ */
-/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ www.lanrenzhijia.com */
+/*! Ò»Ò¶¹ÂÖÛ | qq:28701884 | »¶Ó­Ö¸½Ì */
+/* ´úÂëÕûÀí£ºÀÁÈËÖ®¼Ò www.lanrenzhijia.com */
 var play = play||{};
 
 play.init = function (){
 	
-	play.my				=	1;				//ï¿½ï¿½Ò·ï¿½
-	play.map 			=	com.arr2Clone (com.initMap);		//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	play.nowManKey		=	false;			//ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	play.pace 			=	[];				//ï¿½ï¿½Â¼Ã¿Ò»ï¿½ï¿½
-	play.isPlay 		=	true ;			//ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	play.my				=	1;				//Íæ¼Ò·½
+	play.map 			=	com.arr2Clone (com.initMap);		//³õÊ¼»¯ÆåÅÌ
+	play.nowManKey		=	false;			//ÏÖÔÚÒª²Ù×÷µÄÆå×Ó
+	play.pace 			=	[];				//¼ÇÂ¼Ã¿Ò»²½
+	play.isPlay 		=	true ;			//ÊÇ·ñÄÜ×ßÆå
 	play.mans 			=	com.mans;
 	play.bylaw 			= 	com.bylaw;
 	play.show 			= 	com.show;
 	play.showPane 		= 	com.showPane;
-	play.isOffensive	=	true;			//ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½
-	play.depth			=	play.depth || 3;				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	play.isOffensive	=	true;			//ÊÇ·ñÏÈÊÖ
+	play.depth			=	play.depth || 3;				//ËÑË÷Éî¶È
 	
-	play.isFoul			=	false;	//ï¿½Ç·ñ·¸¹æ³¤ï¿½ï¿½
+	play.isFoul			=	false;	//ÊÇ·ñ·¸¹æ³¤½«
 	
 	
 	
-	com.pane.isShow		=	 false;			//ï¿½ï¿½ï¿½Ø·ï¿½ï¿½ï¿½
+	com.pane.isShow		=	 false;			//Òþ²Ø·½¿é
 	
-	//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//³õÊ¼»¯Æå×Ó
 	for (var i=0; i<play.map.length; i++){
 		for (var n=0; n<play.map[i].length; n++){
 			var key = play.map[i][n];
@@ -35,7 +35,7 @@ play.init = function (){
 	}
 	play.show();
 	
-	//ï¿½ó¶¨µï¿½ï¿½ï¿½Â¼ï¿½
+	//°ó¶¨µã»÷ÊÂ¼þ
 	com.canvas.addEventListener("click",play.clickCanvas)
 	//clearInterval(play.timer);
 	//com.get("autoPlay").addEventListener("click", function(e) {
@@ -59,7 +59,7 @@ play.init = function (){
 	})
 	*/
 	
-	/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ www.lanrenzhijia.com */
+	/* ´úÂëÕûÀí£ºÀÁÈËÖ®¼Ò www.lanrenzhijia.com */
 	com.get("regretBn").addEventListener("click", function(e) {
 		play.regret();
 	})
@@ -80,12 +80,12 @@ play.init = function (){
 	
 }
 
-/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ www.lanrenzhijia.com */
+/* ´úÂëÕûÀí£ºÀÁÈËÖ®¼Ò www.lanrenzhijia.com */
 
-//ï¿½ï¿½ï¿½ï¿½
+//»ÚÆå
 play.regret = function (){
 	var map  = com.arr2Clone(com.initMap);
-	//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//³õÊ¼»¯ËùÓÐÆå×Ó
 	for (var i=0; i<map.length; i++){
 		for (var n=0; n<map[i].length; n++){
 			var key = map[i][n];
@@ -132,7 +132,7 @@ play.regret = function (){
 
 
 
-//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+//µã»÷ÆåÅÌÊÂ¼þ
 play.clickCanvas = function (e){
 	if (!play.isPlay) return false;
 	var key = play.getClickMan(e);
@@ -146,15 +146,15 @@ play.clickCanvas = function (e){
 	}else {
 		play.clickPoint(x,y);	
 	}
-	play.isFoul = play.checkFoul();//ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½Ç³ï¿½ï¿½ï¿½
+	play.isFoul = play.checkFoul();//¼ì²âÊÇ²»ÊÇ³¤½«
 }
 
-//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½Ð»ï¿½ï¿½ß³ï¿½ï¿½ï¿½
+//µã»÷Æå×Ó£¬Á½ÖÖÇé¿ö£¬Ñ¡ÖÐ»òÕß³Ô×Ó
 play.clickMan = function (key,x,y){
 	var man = com.mans[key];
-	//ï¿½ï¿½ï¿½ï¿½
+	//³Ô×Ó
 	if (play.nowManKey&&play.nowManKey != key && man.my != com.mans[play.nowManKey ].my){
-		//manÎªï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//manÎª±»³ÔµôµÄÆå×Ó
 		if (play.indexOfPs(com.mans[play.nowManKey].ps,[x,y])){
 			man.isShow = false;
 			var pace=com.mans[play.nowManKey].x+""+com.mans[play.nowManKey].y
@@ -176,14 +176,14 @@ play.clickMan = function (key,x,y){
 			if (key == "j0") play.showWin (-1);
 			if (key == "J0") play.showWin (1);
 		}
-	// Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// Ñ¡ÖÐÆå×Ó
 	}else{
 		if (man.my===1){
 			if (com.mans[play.nowManKey]) com.mans[play.nowManKey].alpha = 1 ;
 			man.alpha = 0.6;
 			com.pane.isShow = false;
 			play.nowManKey = key;
-			com.mans[key].ps = com.mans[key].bl(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½
+			com.mans[key].ps = com.mans[key].bl(); //»ñµÃËùÓÐÄÜ×Åµã
 			com.dot.dots = com.mans[key].ps
 			com.show();
 			//com.get("selectAudio").start(0);
@@ -192,7 +192,7 @@ play.clickMan = function (key,x,y){
 	}
 }
 
-//ï¿½ï¿½ï¿½ï¿½Åµï¿½
+//µã»÷×Åµã
 play.clickPoint = function (x,y){
 	var key=play.nowManKey;
 	var man=com.mans[key];
@@ -213,13 +213,13 @@ play.clickPoint = function (x,y){
 			com.get("clickAudio").play();
 			setTimeout("play.AIPlay()",500);
 		}else{
-			//alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½Å¶ï¿½ï¿½")	
+			//alert("²»ÄÜÕâÃ´×ßÅ¶£¡")	
 		}
 	}
 	
 }
 
-//Aiï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
+//Ai×Ô¶¯×ßÆå
 play.AIPlay = function (){
 	//return
 	play.my = -1 ;
@@ -243,7 +243,7 @@ play.AIPlay = function (){
 	
 }
 
-//ï¿½ï¿½ï¿½ï¿½Ç·ñ³¤½ï¿½
+//¼ì²éÊÇ·ñ³¤½«
 play.checkFoul = function(){
 	var p=play.pace;
 	var len=parseInt(p.length,10);
@@ -257,7 +257,7 @@ play.checkFoul = function(){
 
 play.AIclickMan = function (key,x,y){
 	var man = com.mans[key];
-	//ï¿½ï¿½ï¿½ï¿½
+	//³Ô×Ó
 	man.isShow = false;
 	delete play.map[com.mans[play.nowManKey].y][com.mans[play.nowManKey].x];
 	play.map[y][x] = play.nowManKey;
@@ -289,7 +289,7 @@ play.AIclickPoint = function (x,y){
 	}
 	com.show();
 }
-/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ www.lanrenzhijia.com */
+/* ´úÂëÕûÀí£ºÀÁÈËÖ®¼Ò www.lanrenzhijia.com */
 
 play.indexOfPs = function (ps,xy){
 	for (var i=0; i<ps.length; i++){
@@ -299,7 +299,7 @@ play.indexOfPs = function (ps,xy){
 	
 }
 
-//ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½
+//»ñµÃµã»÷µÄ×Åµã
 play.getClickPoint = function (e){
 	var domXY = com.getDomXY(com.canvas);
 	var x=Math.round((e.pageX-domXY.x-com.pointStartX-20)/com.spaceX)
@@ -307,7 +307,7 @@ play.getClickPoint = function (e){
 	return {"x":x,"y":y}
 }
 
-//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//»ñµÃÆå×Ó
 play.getClickMan = function (e){
 	var clickXY=play.getClickPoint(e);
 	var x=clickXY.x;
@@ -319,10 +319,10 @@ play.getClickMan = function (e){
 play.showWin = function (my){
 	play.isPlay = false;
 	if (my===1){
-		alert("ï¿½ï¿½Ï²ï¿½ã£¬ï¿½ï¿½Ó®ï¿½Ë£ï¿½");
+		alert("¹§Ï²Äã£¬ÄãÓ®ÁË£¡");
 	}else{
-		alert("ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½");
+		alert("ºÜÒÅº¶£¬ÄãÊäÁË£¡");
 	}
 }
 
-/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ www.lanrenzhijia.com */
+/* ´úÂëÕûÀí£ºÀÁÈËÖ®¼Ò www.lanrenzhijia.com */
